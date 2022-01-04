@@ -27,27 +27,38 @@ filetype plugin indent on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
-Plug 'sainnhe/forest-night'
+
+" Themes
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/everforest'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/sonokai'
 Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
-Plug 'mbbill/undotree'
+
+" Code completition
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf.vim'
-Plug 'leafOfTree/vim-vue-plugin'
-Plug 'leafgarland/typescript-vim'
-Plug 'preservim/nerdtree'
 Plug 'ap/vim-css-color'
-Plug 'posva/vim-vue'
-Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdcommenter'
-Plug 'cakebaker/scss-syntax.vim'
+"Plug 'cakebaker/scss-syntax.vim'
 Plug 'bhurlow/vim-parinfer'
 Plug 'w0rp/ale'
+"Plug 'posva/vim-vue'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'neovim-lspconfig'
+
+" Files and tools
+Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'vim-utils/vim-man'
+Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
+Plug 'mhinz/vim-startify'
+
+" Looks and IDE visual parts
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
@@ -116,29 +127,31 @@ autocmd! User GoyoLeave Limelight!
 "set background=dark
 
 "sonny
-" Important!!
-if has('termguicolors')
-  set termguicolors
-endif
-" The configuration options should be placed before `colorscheme sonokai`.
-let g:sonokai_style = 'shusia'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-colorscheme sonokai
 
-"" Important!!
+
 "if has('termguicolors')
   "set termguicolors
 "endif
-"" For dark version.
-"set background=dark
-"" For light version.
-""set background=light
-"" Set contrast.
-"" This configuration option should be placed before `colorscheme forest-night`.
-"" Available values: 'hard', 'medium'(default), 'soft'
-"let g:gruvbox_material_background = 'hard'
-"colorscheme forest-night
+"let g:everforest_background = 'medium'
+"colorscheme everforest
+
+if has('termguicolors')
+  set termguicolors
+endif
+let g:everforest_background = 'hard'
+colorscheme everforest
+
+
+
+" Important!!
+"if has('termguicolors')
+  "set termguicolors
+"endif
+"" The configuration options should be placed before `colorscheme sonokai`.
+"let g:sonokai_style = 'shusia'
+"let g:sonokai_enable_italic = 1
+"let g:sonokai_disable_italic_comment = 1
+"colorscheme sonokai
 
 "" Important!!
 "if has('termguicolors')
@@ -183,8 +196,12 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-nnoremap <leader>f :Goyo<CR>
-nnoremap <leader>F :Goyo<CR>
+nnoremap <leader>z :Goyo<CR>
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
