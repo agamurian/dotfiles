@@ -1,0 +1,22 @@
+XTerm*background:   #000000  ! Force black background
+XTerm*foreground:   #d8dee9  ! Light gray text
+XTerm*cursorColor:  #88c0d0  ! Pastel blue cursor
+
+! Force colors
+XTerm*color0:  #2e3440  ! Black
+XTerm*color1:  #bf616a  ! Red
+XTerm*color2:  #a3be8c  ! Green
+XTerm*color3:  #ebcb8b  ! Yellow
+XTerm*color4:  #81a1c1  ! Blue
+XTerm*color5:  #b48ead  ! Magenta
+XTerm*color6:  #88c0d0  ! Cyan
+XTerm*color7:  #e5e9f0  ! White
+
+XTerm*color8:  #4c566a  ! Bright Black
+XTerm*color9:  #bf616a  ! Bright Red
+XTerm*color10: #a3be8c  ! Bright Green
+XTerm*color11: #ebcb8b  ! Bright Yellow
+XTerm*color12: #81a1c1  ! Bright Blue
+XTerm*color13: #b48ead  ! Bright Magenta
+XTerm*color14: #8fbcbb  ! Bright Cyan
+XTerm*color15: #eceff4  ! Bright White
