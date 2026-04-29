@@ -17,8 +17,9 @@ blender, gimp
 ranger, fzf, vim, etc
 
 find my simple vim config here:
-github.com/agamurian/nvim_config
+[nvim_config](github.com/agamurian/nvim_config)
+
 
 :D on screen you can see me fighting ADHD with my:
-github.com/agamurian/focus_holder
+[focus_holder](github.com/agamurian/focus_holder)
 
