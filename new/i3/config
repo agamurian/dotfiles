@@ -206,7 +206,7 @@ bindsym $mod+r mode "resize"
    bar {
      position top
      status_command i3status
-     padding 0px 690px 0px 20px
+     padding 0px 700px 0px 0px
      colors {
        background #000000
        statusline #eeeeee
