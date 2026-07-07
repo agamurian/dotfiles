@@ -8,6 +8,9 @@ and tested robust software.
 new one in folder new:
 ![screenshot](./Screenshot.png)
 
+with picom:
+![screenshot](./Screenshot_picom.png)
+
 Base: Ubuntu Mate + i3 (latest LTS)
 WM: i3 window manager
 Panel: Tint2 panel
