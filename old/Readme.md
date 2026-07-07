@@ -5,7 +5,6 @@ I try to keep my settings relatively simple and easy to use.
 As with age i get used to certain workflow, it consist of simple, familiar
 and tested robust software.
 
-new one in folder new:
 ![screenshot](./Screenshot.png)
 
 Base: Ubuntu Mate + i3 (latest LTS)
